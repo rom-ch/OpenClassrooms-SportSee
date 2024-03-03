@@ -1,0 +1,10 @@
+@use "../utils/variables.scss" as *;
+
+.side-menu__button {
+  width: $size-64;
+  height: $size-64;
+  background-color: $clr-bg-100;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
