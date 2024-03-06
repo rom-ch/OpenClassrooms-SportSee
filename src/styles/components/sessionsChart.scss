@@ -1,0 +1,19 @@
+@use "../utils/variables.scss" as *;
+
+.sessionsChart__title {
+  color: hsl(0, 0%, 100%, 0.5);
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  top: $size-24;
+  left: $size-24;
+  max-width: 70%;
+}
+
+.sessionsChart__tooltip {
+  background-color: $clr-bg-100;
+  font-size: $size-12;
+  font-weight: $fw-500;
+  padding-inline: .5rem;
+  line-height: 2.5;
+}

@@ -1,5 +1,6 @@
-import "../styles/layout/header.scss";
+import { NavLink } from "react-router-dom";
 import sportseeLogo from "../assets/sportsee-logo.svg";
+import "../styles/layout/header.scss";
 
 function Header() {
   return (
@@ -10,24 +11,28 @@ function Header() {
       <nav className="navbar">
         <ul className="navbar__menu">
           <li className="navbar__menu-item">
-            <a className="navbar__menu-item-link" href="#">
+            <NavLink to="/accueil" className="navbar__menu-item-link" href="#">
               Accueil
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__menu-item">
-            <a className="navbar__menu-item-link" href="#">
+            <NavLink to="/profile" className="navbar__menu-item-link" href="#">
               Profil
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__menu-item">
-            <a className="navbar__menu-item-link" href="#">
+            <NavLink to="/settings" className="navbar__menu-item-link" href="#">
               Réglage
-            </a>
+            </NavLink>
           </li>
           <li className="navbar__menu-item">
-            <a className="navbar__menu-item-link" href="#">
+            <NavLink
+              to="/community"
+              className="navbar__menu-item-link"
+              href="#"
+            >
               Communauté
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>

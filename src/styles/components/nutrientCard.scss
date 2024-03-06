@@ -1,0 +1,26 @@
+@use '../utils/variables.scss' as *;
+
+.nutrient-card {
+  width: 258px;
+  padding: $size-32;
+  background-color: $clr-bg-200;
+  // background-color: lightgreen;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: $size-24;
+}
+
+.nutrient-card__content-value {
+  color: #282D30;
+  font-size: $size-20;
+  font-weight: $fw-700;
+  margin-bottom: 6px;
+}
+
+.nutrient-card__content-name {
+  color: #74798C;
+  font-size: 14px;
+  font-weight: $fw-500;
+}

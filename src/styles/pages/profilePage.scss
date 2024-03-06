@@ -1,0 +1,48 @@
+@use "../utils/variables.scss" as *;
+
+.main-profile {
+  margin: 0 auto;
+  padding: $size-48;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-profile__header {
+  &-title {
+    margin: 0;
+    font-size: $size-48;
+    font-weight: $fw-500;
+
+    span {
+      color: $clr-accent;
+    }
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+.main-profile__content {
+  display: flex;
+  gap: 2rem;
+}
+
+.chart-activity__wrapper {
+  width: 835px;
+  height: 320px;
+  margin-bottom: 28px;
+  background-color: $clr-bg-200;
+}
+
+.chart-card__wrapper {
+  width: 835px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nutrient-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
