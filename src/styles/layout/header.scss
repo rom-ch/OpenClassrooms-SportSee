@@ -1,0 +1,36 @@
+@use "../utils/variables.scss" as *;
+
+.header {
+  height: 91px;
+  padding: 0 $size-24;
+  background-color: $clr-bg-900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 4px rgba($clr-bg-900, 0.25);
+}
+
+.header__logo {
+  width: 178px;
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.navbar {
+  width: 85%;
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+
+    &-item-link {
+      color: $clr-font-light;
+      font-size: $size-24;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}

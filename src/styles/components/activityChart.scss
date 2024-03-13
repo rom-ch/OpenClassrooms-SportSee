@@ -1,0 +1,56 @@
+@use "../utils/variables.scss" as *;
+
+.wrapper__activityChart {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activityChart__legend {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+}
+
+.activityChart__legend-list {
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: $fw-500;
+  color: #74798c;
+
+  display: flex;
+  gap: $size-32;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: $size-8;
+  }
+
+  .dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #282d30;
+    border-radius: 50%;
+
+    &-red {
+      background-color: #e60000;
+    }
+  }
+}
+
+.activityChart__tooltip {
+  background-color: #e60000;
+  color: $clr-font-light;
+  font-size: 10px;
+  height: 63px;
+  width: 40px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}

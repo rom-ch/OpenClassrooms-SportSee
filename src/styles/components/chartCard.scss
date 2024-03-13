@@ -1,0 +1,20 @@
+@use "../utils/variables.scss" as *;
+
+.chart-card {
+  width: 258px;
+  height: 263px;
+  border-radius: 6px;
+
+  &.session {
+    background-color: #ff0000;
+    padding-inline: $size-8;
+  }
+
+  &.performance {
+    background-color: #282d30;
+  }
+
+  &.goal {
+    background-color: #fbfbfb;
+  }
+}

@@ -1,0 +1,26 @@
+@use "../utils/variables.scss" as *;
+
+.side-menu {
+  padding: $size-48 $size-24;
+  background-color: $clr-bg-900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $size-20;
+  flex: 1;
+}
+
+.side-menu__copyright {
+  color: $clr-font-light;
+  font-size: $size-12;
+  font-weight: $fw-500;
+  writing-mode: vertical-lr;
+  rotate: 180deg;
+}

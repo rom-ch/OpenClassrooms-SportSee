@@ -1,0 +1,24 @@
+@use "../utils/variables.scss" as *;
+
+.main__homepage,
+.main__settings-page,
+.main__community-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction__title {
+  font-size: $size-48;
+}
+
+.construction__img {
+  width: 200px;
+  margin: $size-48 auto;
+}
+
+.construction__subtitle {
+  font-size: $size-64;
+  font-weight: $fw-700;
+}
