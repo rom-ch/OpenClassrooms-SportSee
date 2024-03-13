@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
-import PropTypes from "prop-types";
+import PropTypes, { object } from "prop-types";
 import "../styles/components/activityChart.scss";
 
 function ActivityChart({ data }) {
@@ -39,19 +39,32 @@ function ActivityChart({ data }) {
             tickMargin={16}
           />
           <YAxis
-            tick={{ fill: "#9B9EAC" }}
-            tickLine={false}
+            yAxisId="kilogram"
+            dataKey="kilogram"
+            domain={["dataMin - 2", "dataMax + 1"]}
+            tickCount={3}
+            interval={0}
             axisLine={false}
             orientation="right"
-            tickCount={3}
+            tickLine={false}
+            tick={{ fontSize: 14 }}
+          />
+          <YAxis
+            yAxisId="calories"
+            dataKey="calories"
+            type="number"
+            domain={["dataMin - 10", "dataMax + 10"]}
+            hide={true}
           />
           <Bar
+            yAxisId="kilogram"
             dataKey="kilogram"
             fill="#282D30"
             barSize={8}
             radius={[4, 4, 0, 0]}
           />
           <Bar
+            yAxisId="calories"
             dataKey="calories"
             fill="#E60000"
             barSize={8}
@@ -80,7 +93,7 @@ function CustomTooltip({ active, payload }) {
 }
 
 ActivityChart.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.arrayOf(object).isRequired,
 };
 
 CustomTooltip.propTypes = {

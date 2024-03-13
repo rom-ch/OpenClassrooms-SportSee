@@ -36,7 +36,7 @@ function GoalChart({ data }) {
 }
 
 GoalChart.propTypes = {
-  data: PropTypes.number,
+  data: PropTypes.number.isRequired,
 };
 
 export default GoalChart;

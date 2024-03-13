@@ -6,7 +6,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import PropTypes from "prop-types";
+import PropTypes, { object } from "prop-types";
 import "../styles/components/sessionsChart.scss";
 
 function SessionsChart({ data }) {
@@ -67,7 +67,7 @@ function CustomTooltip({ active, payload }) {
 }
 
 SessionsChart.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.arrayOf(object).isRequired,
 };
 
 CustomTooltip.propTypes = {

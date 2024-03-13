@@ -6,8 +6,8 @@ function ChartCard({ className, content }) {
 }
 
 ChartCard.propTypes = {
-  className: PropTypes.string,
-  content: PropTypes.object,
+  className: PropTypes.string.isRequired,
+  content: PropTypes.element,
 };
 
 export default ChartCard;

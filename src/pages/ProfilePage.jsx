@@ -13,16 +13,16 @@ import sessionsData from "../mockedData/user-average-sessions.json";
 import activityData from "../mockedData/user-activity.json";
 import ActivityChart from "../components/ActivityChart";
 import NutrientCard from "../components/NutrientCard";
-
+// import { useUser } from "../contexts/UserContext";
 import fetchData from "../services/fetchData";
+import { useEffect } from "react";
 
 function ProfilePage() {
-  // async function createUser() {
-  //   const userInstance = await fetchData();
-  //   console.log(userInstance);
-  // }
+  // const { userData } = useUser();
 
-  // createUser();
+  useEffect(function () {
+    fetchData(12);
+  }, []);
 
   return (
     <main className="main-profile">

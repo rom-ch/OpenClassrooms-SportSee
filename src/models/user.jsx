@@ -2,34 +2,19 @@ import UserInfos from "./userInfos";
 import KeyData from "./keyData";
 
 export default class User {
-  constructor(
-    id,
-    userId,
-    userInfos,
-    todayScore,
-    keyData
-    // sessionsActivity,
-    // sessionsLength,
-    // kind,
-    // dataKind
-  ) {
-    this.id = id;
-    this.userId = userId;
+  constructor(data) {
+    this.id = data.id;
     this.userInfos = new UserInfos(
-      userInfos.firstName,
-      userInfos.lastName,
-      userInfos.age
+      data.userInfos.firstName,
+      data.userInfos.lastName,
+      data.userInfos.age
     );
-    this.todayScore = todayScore;
+    this.todayScore = data.todayScore;
     this.keyData = new KeyData(
-      keyData.calorieCount,
-      keyData.proteinCount,
-      keyData.carbohydrateCount,
-      keyData.lipidCount
+      data.keyData.calorieCount,
+      data.keyData.proteinCount,
+      data.keyData.carbohydrateCount,
+      data.keyData.lipidCount
     );
-    // this.sessionsActivity = new SessionsActivity();
-    // this.sessionsLength = new SessionsLength();
-    // this.sessionLength = new Kind();
-    // this.dataKind = new DataKind();
   }
 }

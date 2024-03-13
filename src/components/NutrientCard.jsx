@@ -19,10 +19,10 @@ function NutrientCard({ data, name, unit, icon }) {
 }
 
 NutrientCard.propTypes = {
-  data: PropTypes.number,
-  name: PropTypes.string,
-  unit: PropTypes.string,
-  icon: PropTypes.string,
+  data: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  unit: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 export default NutrientCard;
