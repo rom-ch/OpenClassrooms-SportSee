@@ -1,0 +1,7 @@
+@use "../utils/variables.scss" as *;
+
+.chart-card__wrapper {
+  width: 835px;
+  display: flex;
+  justify-content: space-between;
+}

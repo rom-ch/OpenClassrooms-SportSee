@@ -24,3 +24,13 @@
   font-size: 14px;
   font-weight: $fw-500;
 }
+
+@media (max-width: 1350px) {
+  .nutrient-card {
+    width: 200px;
+  }
+
+  .nutrient-card {
+    padding: $size-16;
+  }
+}

@@ -28,21 +28,12 @@
   gap: 2rem;
 }
 
-.chart-activity__wrapper {
-  width: 835px;
-  height: 320px;
-  margin-bottom: 28px;
-  background-color: $clr-bg-200;
-}
+@media (max-width: 1350px) {
+  .main-profile {
+    padding: $size-16;
+  }
 
-.chart-card__wrapper {
-  width: 835px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nutrient-card__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .main-profile__content {
+    flex-direction: column;
+  }
 }

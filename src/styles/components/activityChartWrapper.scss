@@ -1,0 +1,8 @@
+@use "../utils/variables.scss" as *;
+
+.chart-activity__wrapper {
+  width: 835px;
+  height: 320px;
+  margin-bottom: 28px;
+  background-color: $clr-bg-200;
+}

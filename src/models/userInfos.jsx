@@ -1,7 +1,7 @@
 export default class UserInfos {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age
+  constructor(data) {
+    this.firstName = data.firstName;
+    this.lastName = data.lastName;
+    this.age = data.age
   }
 }

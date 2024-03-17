@@ -1,8 +1,8 @@
 export default class KeyData {
-  constructor(calorieCount, proteinCount, carbohydrateCount, lipidCount) {
-    this.calorieCount = calorieCount;
-    this.proteinCount = proteinCount;
-    this.carbohydrateCount = carbohydrateCount;
-    this.lipidCount = lipidCount;
+  constructor(data) {
+    this.calorieCount = data.calorieCount;
+    this.proteinCount = data.proteinCount;
+    this.carbohydrateCount = data.carbohydrateCount;
+    this.lipidCount = data.lipidCount;
   }
 }
