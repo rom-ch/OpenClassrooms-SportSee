@@ -1,13 +1,17 @@
 import ActivityChart from "../components/ActivityChart";
-import '../styles/components/activityChartWrapper.scss';
-import activityData from "../mockedData/user-activity.json";
+import PropTypes, { object } from "prop-types";
+import "../styles/components/activityChartWrapper.scss";
 
-function ActivityChartWrapper() {
+function ActivityChartWrapper({ data }) {
   return (
     <div className="chart-activity__wrapper">
-      <ActivityChart data={activityData[0].sessions} />
+      <ActivityChart data={data} />
     </div>
   );
 }
+
+ActivityChartWrapper.propTypes = {
+  data: PropTypes.arrayOf(object).isRequired,
+};
 
 export default ActivityChartWrapper;

@@ -1,48 +1,27 @@
-import User from "../models/UserMainInfos";
-import UserActivity from "../models/UserActivity";
-import UserSessions from "../models/UserSessions";
-import UserPerformance from "../models/UserPerformance";
+import DataClass from "./DataClass";
+import MockedDataClass from "./mockedDataClass";
 
-const getUserInfos = async id => {
-  try {
-    const res = await fetch(`http://localhost:3000/user/${id}`);
-    const data = await res.json();
-    return new User(data.data);
-  } catch (err) {
-    console.log(err);
+export default class fetchData {
+  constructor(id) {
+    this.id = id;
   }
-};
 
-const getUserActivity = async id => {
-  try {
-    const res = await fetch(`http://localhost:3000/user/${id}/activity`);
-    const data = await res.json();
-    return new UserActivity(data.data);
-  } catch (err) {
-    console.log(err);
+  async getData() {
+    if (process.env.NODE_ENV === 'production') {
+      const getData = new DataClass(this.id);
+      const mainInfos = await getData.getUserMainInfos();
+      const activity = await getData.getUserActivity();
+      const sessions = await getData.getUserSessions();
+      const performance = await getData.getUserPerformance();
+      return { mainInfos, activity, sessions, performance };
+    }
+    if (process.env.NODE_ENV === 'development') {
+      const getMockedData = new MockedDataClass(this.id);
+      const mainInfos = await getMockedData.getUserMainInfos();
+      const activity = await getMockedData.getUserActivity();
+      const sessions = await getMockedData.getUserSessions();
+      const performance = await getMockedData.getUserPerformance();
+      return { mainInfos, activity, sessions, performance };
+    }
   }
-};
-
-const getUserSessions = async id => {
-  try {
-    const res = await fetch(
-      `http://localhost:3000/user/${id}/average-sessions`
-    );
-    const data = await res.json();
-    return new UserSessions(data.data);
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const getUserPerformance = async id => {
-  try {
-    const res = await fetch(`http://localhost:3000/user/${id}/performance`);
-    const data = await res.json();
-    return new UserPerformance(data.data);
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-export { getUserInfos, getUserActivity, getUserSessions, getUserPerformance };
+}

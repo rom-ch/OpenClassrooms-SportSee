@@ -1,25 +1,30 @@
+import PropTypes, { object } from "prop-types";
 import ChartCard from "./ChartCard";
 import GoalChart from "../components/GoalChart";
 import SessionsChart from "../components/SessionsChart";
 import "../styles/components/cardChartWrapper.scss";
+import PerformanceChart from "./PerformanceChart";
 
-import sessionsData from "../mockedData/user-average-sessions.json";
-import mainData from "../mockedData/user-main-data.json";
-
-function CardChartWrapper() {
+function CardChartWrapper({ sessions, performance, todayScore }) {
   return (
     <div className="chart-card__wrapper">
       <ChartCard
         className="session"
-        content={<SessionsChart data={sessionsData[0].sessions} />}
+        content={<SessionsChart data={sessions} />}
       />
-      <ChartCard className="performance" />
       <ChartCard
-        className="goal"
-        content={<GoalChart data={mainData[0].todayScore} />}
+        className="performance"
+        content={<PerformanceChart data={performance} />}
       />
+      <ChartCard className="goal" content={<GoalChart data={todayScore} />} />
     </div>
   );
 }
+
+CardChartWrapper.propTypes = {
+  sessions: PropTypes.arrayOf(object).isRequired,
+  performance: PropTypes.object,
+  todayScore: PropTypes.number,
+};
 
 export default CardChartWrapper;

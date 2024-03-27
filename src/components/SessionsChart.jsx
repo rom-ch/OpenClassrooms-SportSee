@@ -23,9 +23,9 @@ function SessionsChart({ data }) {
   return (
     <div className="wrapper">
       <div className="sessionsChart__title">Durée moyenne des sessions</div>
-      <ResponsiveContainer>
-        <LineChart data={data} width="100%" height="100%">
-          <Tooltip cursor={false} content={<CustomTooltip />} />
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <Tooltip content={<CustomTooltip />} cursor={false} />
           <XAxis
             dataKey="day"
             axisLine={false}
@@ -52,6 +52,7 @@ function SessionsChart({ data }) {
           />
         </LineChart>
       </ResponsiveContainer>
+      <div className="sessionsChart__weekend"></div>
     </div>
   );
 }
@@ -77,5 +78,3 @@ CustomTooltip.propTypes = {
 };
 
 export default SessionsChart;
-
-// axisLine={false} tickLine={false} tick={false}

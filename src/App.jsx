@@ -15,7 +15,11 @@ function App() {
             path="/accueil"
             element={<UnderConstructionPage title="Page d'accueil" />}
           />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route
+            path="/profile"
+            element={<Navigate to="/profile/12" replace />}
+          />
+          <Route path="/profile/:id" element={<ProfilePage />} />
           <Route
             path="/settings"
             element={<UnderConstructionPage title="Page Réglage" />}

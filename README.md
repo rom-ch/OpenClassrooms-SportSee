@@ -1,8 +1,24 @@
-# React + Vite
+---
+[![My Skills](https://skillicons.dev/icons?i=react,nodejs,sass)](https://skillicons.dev)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# SportSee
+---
+### Description
+SportSee is a **sports coaching application** where the users will be able to follow their sessions and related data like daily activity, performances average session time and more.
 
-Currently, two official plugins are available:
+---
+### Getting Started
+#### Dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
++ react
++ react-router-dom
++ recharts
++ sass
+
+#### Installing
++ Clone the repository: https://github.com/rom-ch/OpenClassrooms-SportSee.git
++ install all dependencies by running **npm install** inthe console
+
+      npm install
+
+#### Executing program

@@ -14,6 +14,17 @@
   background-color: $clr-bg-100;
   font-size: $size-12;
   font-weight: $fw-500;
-  padding-inline: .5rem;
+  padding-inline: 0.5rem;
   line-height: 2.5;
+}
+
+.sessionsChart__weekend {
+  position: absolute;
+  width: 70px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 0%, 0.15);
+  z-index: 0;
+  pointer-events: none;
 }

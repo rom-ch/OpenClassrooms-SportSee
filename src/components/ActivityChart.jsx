@@ -53,7 +53,7 @@ function ActivityChart({ data }) {
             yAxisId="calories"
             dataKey="calories"
             type="number"
-            domain={["dataMin - 10", "dataMax + 10"]}
+            domain={["dataMin - 100", "dataMax + 10"]}
             hide={true}
           />
           <Bar
